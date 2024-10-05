@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <ProjectGuid>ab0adf91-e7c7-4cb4-a39d-e1a5374c5602</ProjectGuid>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Description>The Codebelt.Extensions.AwsSignature4 namespace complements the Cuemon.AspNetCore.Authentication namespace while providing a way making and signing HTTP requests in the context of specific AWS services using Signature Version 4.</Description>
+    <PackageTags>aws simple-storage-service s3 amazon aws4-hmac-sha256</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Cuemon.AspNetCore.Authentication" Version="8.3.2" />
+  </ItemGroup>
+
+</Project>
