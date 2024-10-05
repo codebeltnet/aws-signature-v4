@@ -36,7 +36,7 @@ var headerBuilder = new Aws4HmacAuthorizationHeaderBuilder()
 var header = headerBuilder.Build().ToString(); // <-- AWS4-HMAC-SHA256 Credential=AKIAIOSFODNN7EXAMPLE/20220710/eu-west-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=3d2c4a14b38d0283bb697176ade57b2118110de0f00c387d7f0ef58c55a5b91d
 ```
 
-Full soucecode: [Aws4HmacAuthorizationHeaderBuilderTest](https://github.com/codebeltnet/aws-signature-v4/blob/main/test/Codebelt.Extensions.AwsSignature4.Tests/Aws4HmacAuthorizationHeaderBuilderTest.cs)
+Full soucecode: [Aws4HmacAuthorizationHeaderBuilderTest](https://github.com/codebeltnet/aws-signature-v4/blob/main/test/Codebelt.Extensions.AwsSignature4.Test/Aws4HmacAuthorizationHeaderBuilderTest.cs)
 
 ### cURL Example
 ```powershell
