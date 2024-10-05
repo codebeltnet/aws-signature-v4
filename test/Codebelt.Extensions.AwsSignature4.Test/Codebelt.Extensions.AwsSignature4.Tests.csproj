@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\ClassLibrary1\Codebelt.Extensions.AwsSignature4.csproj" />
+    <ProjectReference Include="..\..\src\Codebelt.Extensions.AwsSignature4\Codebelt.Extensions.AwsSignature4.csproj" />
   </ItemGroup>
 
 </Project>
