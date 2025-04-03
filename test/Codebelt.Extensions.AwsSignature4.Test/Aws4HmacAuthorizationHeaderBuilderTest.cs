@@ -23,7 +23,7 @@ namespace Codebelt.Extensions.AwsSignature4
         [Fact]
         public void Build_ShouldGenerateValidAuthorizationHeader()
         {
-            using var host = WebHostTestFactory.Create();
+            using var host = WebHostTestFactory.Create(hostFixture: null);
             var context = host.ServiceProvider.GetRequiredService<IHttpContextAccessor>().HttpContext;
 
             var timestamp = DateTime.Parse("2022-07-10T12:50:42.2737531Z", CultureInfo.InvariantCulture, DateTimeStyles.RoundtripKind); // <-- change this to current date/time
