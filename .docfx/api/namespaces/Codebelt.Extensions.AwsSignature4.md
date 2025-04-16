@@ -19,8 +19,8 @@ Complements: [AWS Signature Version 4](https://docs.aws.amazon.com/general/lates
 In this example we create an HTTP request with an AWS Signature Version 4 header. The example used here is part of the unit test for `Aws4HmacAuthorizationHeaderBuilder`. Unit test is based on [xUnit API](https://xunit.net/) and is written using convenient [extensions for xUnit API by Codebelt](https://github.com/codebeltnet/xunit).
 
 ```csharp
-using var host = WebHostTestFactory.Create();
-var context = host.ServiceProvider.GetRequiredService<IHttpContextAccessor>().HttpContext;
+using var test = WebHostTestFactory.Create();
+var context = test.Host.Services.GetRequiredService<IHttpContextAccessor>().HttpContext;
 
 var timestamp = DateTime.Parse("2022-07-10T12:50:42.2737531Z"); // <-- change this to valid date/time
 
