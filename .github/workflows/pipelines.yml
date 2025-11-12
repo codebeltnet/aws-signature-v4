@@ -57,7 +57,7 @@ jobs:
       configuration: ${{ matrix.configuration }}
       runs-on: ${{ matrix.os }}
       build-switches: -p:SkipSignAssembly=true
-      build: true # we need to build due to xUnitv3 (sad, really)
+      build: true # we need to build due to xUnitv3
       restore: true # needed because of xunitv3
 
   sonarcloud:
