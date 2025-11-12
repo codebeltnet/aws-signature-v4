@@ -2,6 +2,8 @@
 
 An open-source project (MIT license) that targets and complements [AWS Signature Version 4](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_sigv.html) for API requests. It aims to provide a good developer experience by making it simple to generate AWS4-HMAC-SHA256 HTTP Authorization header.
 
+Your versatile AWS Signature Version 4 companion for modern development with `.NET 9` and `.NET 10`.
+
 It is, by heart, free, flexible and built to extend and boost your agile codebelt.
 
 ## **Codebelt.Extensions.AwsSignature4** for .NET
