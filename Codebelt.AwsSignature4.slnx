@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Codebelt.Extensions.AwsSignature4/Codebelt.Extensions.AwsSignature4.csproj" />
+  </Folder>
+  <Folder Name="/test/">
+    <Project Path="test/Codebelt.Extensions.AwsSignature4.Test/Codebelt.Extensions.AwsSignature4.Tests.csproj" />
+  </Folder>
+</Solution>
