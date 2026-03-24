@@ -7,6 +7,18 @@ For more details, please refer to `PackageReleaseNotes.txt` on a per assembly ba
 > [!NOTE]  
 > Changelog entries prior to version 8.4.0 was migrated from previous versions of Cuemon.Extensions.AspNetCore.Authentication.AwsSignature4.
 
+## [10.0.5] - 2026-03-24
+
+This is a patch release that modernizes build infrastructure and tooling while keeping dependencies current with compatible package versions.
+
+### Changed
+
+- Upgraded NuGet packages to latest compatible versions: `Codebelt.Extensions.Xunit.App` (11.0.7 → 11.0.8), `Cuemon.AspNetCore.Authentication` (10.4.0 → 10.5.0), `Cuemon.Security.Cryptography` (10.4.0 → 10.5.0),
+- Upgraded documentation tooling: DocFX (2.78.4 → 2.78.5),
+- Optimized build target: Simplified `PackageReleaseNotes` loading in `Directory.Build.targets` for clearer intent and reduced MSBuild iterations,
+- Modernized test environments: Replaced explicit .NET 8 reference with simplified docker image versioning (`net8.0.418-9.0.311-10.0.103` → `9` and `10`), added dedicated .NET 10 test runner,
+- Enhanced CI/CD: Added `carter` package detection to automated bump-nuget workflow.
+
 ## [10.0.4] - 2026-02-28
 
 This is a service update that focuses on package dependencies.
@@ -71,7 +83,25 @@ This major release is first and foremost focused on ironing out any wrinkles tha
 
 ### Added
 
-- Aws4HmacAuthorizationHeader class in the Codebelt.Extensions.AwsSignature4 namespace that provides a representation of a HTTP AWS4-HMAC-SHA256 Authentication header
-- Aws4HmacAuthorizationHeaderBuilder class in the Codebelt.Extensions.AwsSignature4 namespace that provides a way to fluently represent a HTTP AWS4-HMAC-SHA256 Authentication header
-- Aws4HmacFields class in the Codebelt.Extensions.AwsSignature4 namespace that is a collection of constants for Aws4HmacAuthorizationHeaderBuilder and related
-- DateTimeExtensions class in the Codebelt.Extensions.AwsSignature4 namespace that consist of extension methods for the DateTime struct: ToAwsDateString, ToAwsDateTimeString
+- Aws4HmacAuthorizationHeader class in the Codebelt.Extensions.AwsSignature4 namespace that provides a representation of a HTTP AWS4-HMAC-SHA256 Authentication header,
+- Aws4HmacAuthorizationHeaderBuilder class in the Codebelt.Extensions.AwsSignature4 namespace that provides a way to fluently represent a HTTP AWS4-HMAC-SHA256 Authentication header,
+- Aws4HmacFields class in the Codebelt.Extensions.AwsSignature4 namespace that is a collection of constants for Aws4HmacAuthorizationHeaderBuilder and related,
+- DateTimeExtensions class in the Codebelt.Extensions.AwsSignature4 namespace that consist of extension methods for the DateTime struct: ToAwsDateString, ToAwsDateTimeString.
+
+[Unreleased]: https://github.com/codebeltnet/aws-signature-v4/compare/v10.0.5...HEAD
+[10.0.5]: https://github.com/codebeltnet/aws-signature-v4/compare/v10.0.4...v10.0.5
+[10.0.4]: https://github.com/codebeltnet/aws-signature-v4/compare/v10.0.3...v10.0.4
+[10.0.3]: https://github.com/codebeltnet/aws-signature-v4/compare/v10.0.2...v10.0.3
+[10.0.2]: https://github.com/codebeltnet/aws-signature-v4/compare/v10.0.1...v10.0.2
+[10.0.1]: https://github.com/codebeltnet/aws-signature-v4/compare/v10.0.0...v10.0.1
+[10.0.0]: https://github.com/codebeltnet/aws-signature-v4/compare/v9.0.8...v10.0.0
+[9.0.8]: https://github.com/codebeltnet/aws-signature-v4/compare/v9.0.7...v9.0.8
+[9.0.7]: https://github.com/codebeltnet/aws-signature-v4/compare/v9.0.6...v9.0.7
+[9.0.6]: https://github.com/codebeltnet/aws-signature-v4/compare/v9.0.5...v9.0.6
+[9.0.5]: https://github.com/codebeltnet/aws-signature-v4/compare/v9.0.4...v9.0.5
+[9.0.4]: https://github.com/codebeltnet/aws-signature-v4/compare/v9.0.3...v9.0.4
+[9.0.3]: https://github.com/codebeltnet/aws-signature-v4/compare/v9.0.2...v9.0.3
+[9.0.2]: https://github.com/codebeltnet/aws-signature-v4/compare/v9.0.1...v9.0.2
+[9.0.1]: https://github.com/codebeltnet/aws-signature-v4/compare/v9.0.0...v9.0.1
+[9.0.0]: https://github.com/codebeltnet/aws-signature-v4/compare/v8.4.0...v9.0.0
+[8.4.0]: https://github.com/codebeltnet/aws-signature-v4/compare/v7.0.0...v8.4.0
