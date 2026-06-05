@@ -7,6 +7,10 @@ For more details, please refer to `PackageReleaseNotes.txt` on a per assembly ba
 > [!NOTE]  
 > Changelog entries prior to version 8.4.0 was migrated from previous versions of Cuemon.Extensions.AspNetCore.Authentication.AwsSignature4.
 
+## [10.0.8] - 2026-06-05
+
+This is a service update that focuses on package dependencies.
+
 ## [10.0.7] - 2026-05-22
 
 This is a service update that focuses on package dependencies.
