@@ -20,7 +20,7 @@
     <Copyright>Copyright © Geekle 2024-2026. All rights reserved.</Copyright>
     <Authors>gimlichael</Authors>
     <Company>Geekle</Company>
-    <Product>Extensions for AWS Signature Version 4 API by Codebelt</Product>
+    <Product>AWS Signature Version 4 API by Codebelt</Product>
     <PackageIcon>icon.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageProjectUrl>https://awssignature4.codebelt.net/</PackageProjectUrl>
