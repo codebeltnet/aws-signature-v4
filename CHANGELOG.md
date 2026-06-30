@@ -7,6 +7,23 @@ For more details, please refer to `PackageReleaseNotes.txt` on a per assembly ba
 > [!NOTE]  
 > Changelog entries prior to version 8.4.0 was migrated from previous versions of Cuemon.Extensions.AspNetCore.Authentication.AwsSignature4.
 
+## [10.0.9] - 2026-06-30
+
+This is a patch release focused on API documentation, CI/CD robustness, and test infrastructure improvements.
+
+### Added
+
+- Per-type DocFX overwrite files for public API types (Aws4HmacAuthorizationHeader, Aws4HmacAuthorizationHeaderBuilder, Aws4HmacFields, DateTimeExtensions),
+- Comprehensive DocFX documentation maintenance guidance in AGENTS.md.
+
+### Changed
+
+- Upgraded NuGet packages to latest compatible versions: `Codebelt.Extensions.Xunit.App` (11.1.0 → 11.1.1), `Cuemon.AspNetCore.Authentication` (10.5.3 → 10.5.4), `Cuemon.Security.Cryptography` (10.5.3 → 10.5.4), `Microsoft.NET.Test.Sdk` (18.6.0 → 18.7.0).
+
+### Fixed
+
+- CI deploy job condition now uses always() and explicitly checks success status of all prerequisite jobs to avoid skipped optional jobs suppressing deployment.
+
 ## [10.0.8] - 2026-06-05
 
 This is a service update that focuses on package dependencies.
@@ -100,7 +117,11 @@ This major release is first and foremost focused on ironing out any wrinkles tha
 - Aws4HmacFields class in the Codebelt.Extensions.AwsSignature4 namespace that is a collection of constants for Aws4HmacAuthorizationHeaderBuilder and related,
 - DateTimeExtensions class in the Codebelt.Extensions.AwsSignature4 namespace that consist of extension methods for the DateTime struct: ToAwsDateString, ToAwsDateTimeString.
 
-[Unreleased]: https://github.com/codebeltnet/aws-signature-v4/compare/v10.0.5...HEAD
+[Unreleased]: https://github.com/codebeltnet/aws-signature-v4/compare/v10.0.9...HEAD
+[10.0.9]: https://github.com/codebeltnet/aws-signature-v4/compare/v10.0.8...v10.0.9
+[10.0.8]: https://github.com/codebeltnet/aws-signature-v4/compare/v10.0.7...v10.0.8
+[10.0.7]: https://github.com/codebeltnet/aws-signature-v4/compare/v10.0.6...v10.0.7
+[10.0.6]: https://github.com/codebeltnet/aws-signature-v4/compare/v10.0.5...v10.0.6
 [10.0.5]: https://github.com/codebeltnet/aws-signature-v4/compare/v10.0.4...v10.0.5
 [10.0.4]: https://github.com/codebeltnet/aws-signature-v4/compare/v10.0.3...v10.0.4
 [10.0.3]: https://github.com/codebeltnet/aws-signature-v4/compare/v10.0.2...v10.0.3
