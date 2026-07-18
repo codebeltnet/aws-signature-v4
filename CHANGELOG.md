@@ -7,6 +7,15 @@ For more details, please refer to `PackageReleaseNotes.txt` on a per assembly ba
 > [!NOTE]  
 > Changelog entries prior to version 8.4.0 was migrated from previous versions of Cuemon.Extensions.AspNetCore.Authentication.AwsSignature4.
 
+## [10.0.10] - 2026-07-18
+
+This is a patch release focused on dependency maintenance and tooling updates.
+
+### Changed
+
+- Upgraded NuGet packages to latest compatible versions: `Codebelt.Extensions.Xunit.App` (11.1.1 → 11.1.2), `Cuemon.AspNetCore.Authentication` (10.5.4 → 10.5.5), `Cuemon.Security.Cryptography` (10.5.4 → 10.5.5), `Microsoft.NET.Test.Sdk` (18.7.0 → 18.8.1),
+- Updated container base image tag strategy: NGINX version specification (`1.31.2-alpine` → `1.31-alpine`) for improved compatibility.
+
 ## [10.0.9] - 2026-06-30
 
 This is a patch release focused on API documentation, CI/CD robustness, and test infrastructure improvements.
@@ -117,7 +126,8 @@ This major release is first and foremost focused on ironing out any wrinkles tha
 - Aws4HmacFields class in the Codebelt.Extensions.AwsSignature4 namespace that is a collection of constants for Aws4HmacAuthorizationHeaderBuilder and related,
 - DateTimeExtensions class in the Codebelt.Extensions.AwsSignature4 namespace that consist of extension methods for the DateTime struct: ToAwsDateString, ToAwsDateTimeString.
 
-[Unreleased]: https://github.com/codebeltnet/aws-signature-v4/compare/v10.0.9...HEAD
+[Unreleased]: https://github.com/codebeltnet/aws-signature-v4/compare/v10.0.10...HEAD
+[10.0.10]: https://github.com/codebeltnet/aws-signature-v4/compare/v10.0.9...v10.0.10
 [10.0.9]: https://github.com/codebeltnet/aws-signature-v4/compare/v10.0.8...v10.0.9
 [10.0.8]: https://github.com/codebeltnet/aws-signature-v4/compare/v10.0.7...v10.0.8
 [10.0.7]: https://github.com/codebeltnet/aws-signature-v4/compare/v10.0.6...v10.0.7
