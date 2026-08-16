@@ -10,9 +10,9 @@ When your ASP.NET Core application needs to sign HTTP requests for AWS services 
 
 **For building new authorization headers:** Start with [`Aws4HmacAuthorizationHeaderBuilder`](xref:Codebelt.Extensions.AwsSignature4.Aws4HmacAuthorizationHeaderBuilder), which provides a fluent interface to construct complete AWS Signature Version 4 authorization headers from your HTTP request and AWS credentials.
 
-**For parsing existing headers:** Use [`Aws4HmacAuthorizationHeader.Create`](xref:Codebelt.Extensions.AwsSignature4.Aws4HmacAuthorizationHeader.Create) to validate and parse an existing authorization header string.
+**For parsing existing headers:** Use [`Aws4HmacAuthorizationHeader.Create`](https://awssignature4.codebelt.net/api/Codebelt.Extensions.AwsSignature4.Aws4HmacAuthorizationHeader.html#Codebelt_Extensions_AwsSignature4_Aws4HmacAuthorizationHeader_Create_System_String_System_Action_Cuemon_AspNetCore_Authentication_AuthorizationHeaderOptions__) to validate and parse an existing authorization header string.
 
-**For date/time formatting:** Use the `DateTime` extension methods [`ToAwsDateString`](xref:Codebelt.Extensions.AwsSignature4.DateTimeExtensions.ToAwsDateString) and [`ToAwsDateTimeString`](xref:Codebelt.Extensions.AwsSignature4.DateTimeExtensions.ToAwsDateTimeString) to format request timestamps in the formats required by AWS Signature Version 4.
+**For date/time formatting:** Use the `DateTime` extension methods [`ToAwsDateString`](https://awssignature4.codebelt.net/api/Codebelt.Extensions.AwsSignature4.DateTimeExtensions.html#Codebelt_Extensions_AwsSignature4_DateTimeExtensions_ToAwsDateString_System_DateTime_) and [`ToAwsDateTimeString`](https://awssignature4.codebelt.net/api/Codebelt.Extensions.AwsSignature4.DateTimeExtensions.html#Codebelt_Extensions_AwsSignature4_DateTimeExtensions_ToAwsDateTimeString_System_DateTime_) to format request timestamps in the formats required by AWS Signature Version 4.
 
 ## Related
 
@@ -24,4 +24,3 @@ When your ASP.NET Core application needs to sign HTTP requests for AWS services 
 | Type | Ext | Methods |
 |---:|:-:|---|
 | `DateTime` | ⬇️ | `ToAwsDateString`, `ToAwsDateTimeString` |
-
