@@ -7,6 +7,26 @@ For more details, please refer to `PackageReleaseNotes.txt` on a per assembly ba
 > [!NOTE]  
 > Changelog entries prior to version 8.4.0 was migrated from previous versions of Cuemon.Extensions.AspNetCore.Authentication.AwsSignature4.
 
+## [10.0.12] - 2026-09-12
+
+This is a patch release focused on test infrastructure modernization, repository standards configuration, and dependency updates to align with the Microsoft Testing Platform adoption.
+
+### Added
+
+- Repository standards configuration: `.editorconfig` for code style enforcement and `.gitattributes` for line ending normalization,
+- Test runner specification via `global.json` to enforce Microsoft.Testing.Platform across local and CI environments,
+- `Microsoft.Testing.Extensions.CodeCoverage` (18.11.2) as the new code coverage provider for xUnit v4,
+- Modernized contributing guidelines in `CONTRIBUTING.md` with contemporary Codebelt practices, repository structure clarification, build and test procedures, integration environment setup, and pull request workflow guidance.
+
+### Changed
+
+- Upgraded NuGet packages to latest compatible versions: `Codebelt.Extensions.Xunit.App` (11.2.1 → 12.0.1), `Cuemon.AspNetCore.Authentication` (10.7.0 → 10.7.1), `Cuemon.Security.Cryptography` (10.7.0 → 10.7.1), `Microsoft.NET.Test.Sdk` (18.9.0 → 18.10.0), `MinVer` (7.0.0 → 8.0.0), `xunit.v3` (3.2.2 → 4.0.0), `xunit.v3.runner.console` (3.2.2 → 4.0.0), `xunit.runner.visualstudio` (3.1.5 → 4.0.0),
+- Migrated test coverage tooling from coverlet to Microsoft.Testing.Extensions.CodeCoverage for improved xUnit v4 integration and Microsoft Testing Platform alignment.
+
+### Removed
+
+- `coverlet.msbuild` and `coverlet.collector` test coverage dependencies, replaced with `Microsoft.Testing.Extensions.CodeCoverage`.
+
 ## [10.0.11] - 2026-08-16
 
 This is a patch release focused on dependency updates and test infrastructure improvements.
@@ -136,7 +156,8 @@ This major release is first and foremost focused on ironing out any wrinkles tha
 - Aws4HmacFields class in the Codebelt.Extensions.AwsSignature4 namespace that is a collection of constants for Aws4HmacAuthorizationHeaderBuilder and related,
 - DateTimeExtensions class in the Codebelt.Extensions.AwsSignature4 namespace that consist of extension methods for the DateTime struct: ToAwsDateString, ToAwsDateTimeString.
 
-[Unreleased]: https://github.com/codebeltnet/aws-signature-v4/compare/v10.0.11...HEAD
+[Unreleased]: https://github.com/codebeltnet/aws-signature-v4/compare/v10.0.12...HEAD
+[10.0.12]: https://github.com/codebeltnet/aws-signature-v4/compare/v10.0.11...v10.0.12
 [10.0.11]: https://github.com/codebeltnet/aws-signature-v4/compare/v10.0.10...v10.0.11
 [10.0.10]: https://github.com/codebeltnet/aws-signature-v4/compare/v10.0.9...v10.0.10
 [10.0.9]: https://github.com/codebeltnet/aws-signature-v4/compare/v10.0.8...v10.0.9
