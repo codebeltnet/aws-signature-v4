@@ -86,7 +86,7 @@
     "cleanupCacheHistory": false,
     "disableGitFeatures": false,
     "sitemap": {
-      "baseUrl": "https://awssignaturev4.codebelt.net/",
+      "baseUrl": "https://awssignature4.codebelt.net/",
       "changefreq": "monthly"
     }
   }
