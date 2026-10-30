@@ -7,6 +7,25 @@ For more details, please refer to `PackageReleaseNotes.txt` on a per assembly ba
 > [!NOTE]  
 > Changelog entries prior to version 8.4.0 was migrated from previous versions of Cuemon.Extensions.AspNetCore.Authentication.AwsSignature4.
 
+## [11.0.0] - 2026-11-10
+
+This major release adds .NET 11 support and retains .NET 10. Applications targeting .NET 9 must remain on the 10.x package line or upgrade their target framework.
+
+### Added
+
+- Added `net11.0` library and test targets with preview SDK provisioning in build, pack, test, SonarCloud and CodeQL jobs.
+
+### Changed
+
+- Updated `Codebelt.Coverlet.MTP` from 10.1.0 to 10.1.1,
+- Configured coverage to include this library explicitly so automatic test-infrastructure exclusions do not produce empty reports,
+- Aligned current framework availability documentation and package metadata with .NET 11 and .NET 10,
+- Allowed service updates to reuse a pending major release from the changelog.
+
+### Removed
+
+- Removed the `net9.0` library and test targets under the rolling two-version support policy.
+
 ## [10.0.13] - 2026-10-17
 
 This is a patch release that updates dependencies, consolidates agent guidance and revises documentation hosting.
@@ -176,6 +195,7 @@ This major release is first and foremost focused on ironing out any wrinkles tha
 - Aws4HmacFields class in the Codebelt.Extensions.AwsSignature4 namespace that is a collection of constants for Aws4HmacAuthorizationHeaderBuilder and related,
 - DateTimeExtensions class in the Codebelt.Extensions.AwsSignature4 namespace that consist of extension methods for the DateTime struct: ToAwsDateString, ToAwsDateTimeString.
 
+[11.0.0]: https://github.com/codebeltnet/aws-signature-v4/compare/v10.0.13...HEAD
 [10.0.13]: https://github.com/codebeltnet/aws-signature-v4/compare/v10.0.12...v10.0.13
 [10.0.12]: https://github.com/codebeltnet/aws-signature-v4/compare/v10.0.11...v10.0.12
 [10.0.11]: https://github.com/codebeltnet/aws-signature-v4/compare/v10.0.10...v10.0.11
