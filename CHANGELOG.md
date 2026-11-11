@@ -4,8 +4,31 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 For more details, please refer to `PackageReleaseNotes.txt` on a per assembly basis in the `.nuget` folder.
 
-> [!NOTE]  
+> [!NOTE]
 > Changelog entries prior to version 8.4.0 was migrated from previous versions of Cuemon.Extensions.AspNetCore.Authentication.AwsSignature4.
+
+## [11.0.0] - 2026-11-12
+
+This is a major release that adds .NET 11 support, drops .NET 9, and updates package, CI, documentation hosting, and release automation.
+
+### Added
+
+- Added .NET 11 library and test targets,
+- Added `SonarAnalyzer.CSharp` 10.36.0.15337 to the shared production build configuration.
+
+### Changed
+
+- Updated `Codebelt.Coverlet.MTP` (10.1.0 to 11.0.0), `Codebelt.Extensions.Xunit.App` (12.0.2 to 13.0.0), `Cuemon.AspNetCore.Authentication` and `Cuemon.Security.Cryptography` (10.8.1 to 11.0.0), `Microsoft.NET.Test.Sdk` (18.11.0 to 18.12.0), `Microsoft.Testing.Extensions.HangDump` (2.5.1 to 2.5.3), and `xunit.v3` and `xunit.v3.runner.console` (4.0.2 to 4.0.3),
+- Updated CI to use Ubuntu 26.04 and stable SDK provisioning, and split Docker test environments between .NET 10 and .NET 11,
+- Updated service-update automation to derive versions from Git tags and recognize dated changelog headings while preserving planned releases,
+- Pinned Scorecard workflow actions to commit SHAs,
+- Configured fingerprinted documentation assets for immutable caching on successful and 304 responses, no-store on errors, and complete responses without byte ranges,
+- Updated package guidance and framework availability documentation for .NET 11 and .NET 10.
+
+### Removed
+
+- Removed the .NET 9 library and test targets; consumers must target .NET 10 or later,
+- Removed the repository benchmark prompt from `.github/prompts/benchmark.prompt.md`.
 
 ## [10.0.13] - 2026-10-17
 
@@ -176,6 +199,7 @@ This major release is first and foremost focused on ironing out any wrinkles tha
 - Aws4HmacFields class in the Codebelt.Extensions.AwsSignature4 namespace that is a collection of constants for Aws4HmacAuthorizationHeaderBuilder and related,
 - DateTimeExtensions class in the Codebelt.Extensions.AwsSignature4 namespace that consist of extension methods for the DateTime struct: ToAwsDateString, ToAwsDateTimeString.
 
+[11.0.0]: https://github.com/codebeltnet/aws-signature-v4/compare/v10.0.13...v11.0.0
 [10.0.13]: https://github.com/codebeltnet/aws-signature-v4/compare/v10.0.12...v10.0.13
 [10.0.12]: https://github.com/codebeltnet/aws-signature-v4/compare/v10.0.11...v10.0.12
 [10.0.11]: https://github.com/codebeltnet/aws-signature-v4/compare/v10.0.10...v10.0.11

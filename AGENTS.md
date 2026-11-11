@@ -4,7 +4,7 @@ This document provides guidance for AI agents working in this repository.
 
 ## Project Overview
 
-Codebelt.Extensions.AwsSignature4 is a .NET library that provides extensions and utilities for AWS Signature Version 4 (SigV4) authentication. It complements the `Cuemon.AspNetCore.Authentication` namespace by making it simple to generate AWS4-HMAC-SHA256 HTTP Authorization headers for AWS service requests. The solution targets .NET 10.0 and .NET 9.0.
+Codebelt.Extensions.AwsSignature4 is a .NET library that provides extensions and utilities for AWS Signature Version 4 (SigV4) authentication. It complements the `Cuemon.AspNetCore.Authentication` namespace by making it simple to generate AWS4-HMAC-SHA256 HTTP Authorization headers for AWS service requests. The solution targets .NET 11.0 and .NET 10.0.
 
 ## Coding Standards
 
