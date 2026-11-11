@@ -9,26 +9,26 @@ For more details, please refer to `PackageReleaseNotes.txt` on a per assembly ba
 
 ## [11.0.0] - 2026-11-12
 
-This major release adds .NET 11 support, removes the .NET 9 target, and updates dependencies and documentation hosting.
+This is a major release that adds .NET 11 support, drops .NET 9, and updates package, CI, documentation hosting, and release automation.
 
 ### Added
 
-- .NET 11 library and test targets,
-- `SonarAnalyzer.CSharp` 10.35.0.4138 in the shared production build configuration.
+- Added .NET 11 library and test targets,
+- Added `SonarAnalyzer.CSharp` 10.36.0.15337 to the shared production build configuration.
 
 ### Changed
 
-- Updated `Cuemon.AspNetCore.Authentication` and `Cuemon.Security.Cryptography` from 10.8.1 to 10.8.2,
-- Updated `Codebelt.Coverlet.MTP` from 10.1.0 to 10.1.1 and `Microsoft.Testing.Extensions.HangDump` from 2.5.1 to 2.5.2,
-- Enabled preview SDK provisioning, moved Linux CI jobs to Ubuntu 26.04, and split Docker test environments by framework,
-- Service-update automation uses Git tags, retains planned releases, and validates release dates,
-- Updated framework availability and package guidance for .NET 11 and .NET 10,
-- Fingerprinted documentation assets use immutable caching for successful and 304 responses, no-store for errors, and full responses instead of ranges.
+- Updated `Codebelt.Coverlet.MTP` (10.1.0 to 11.0.0), `Codebelt.Extensions.Xunit.App` (12.0.2 to 13.0.0), `Cuemon.AspNetCore.Authentication` and `Cuemon.Security.Cryptography` (10.8.1 to 11.0.0), `Microsoft.NET.Test.Sdk` (18.11.0 to 18.12.0), `Microsoft.Testing.Extensions.HangDump` (2.5.1 to 2.5.3), and `xunit.v3` and `xunit.v3.runner.console` (4.0.2 to 4.0.3),
+- Updated CI to use Ubuntu 26.04 and stable SDK provisioning, and split Docker test environments between .NET 10 and .NET 11,
+- Updated service-update automation to derive versions from Git tags and recognize dated changelog headings while preserving planned releases,
+- Pinned Scorecard workflow actions to commit SHAs,
+- Configured fingerprinted documentation assets for immutable caching on successful and 304 responses, no-store on errors, and complete responses without byte ranges,
+- Updated package guidance and framework availability documentation for .NET 11 and .NET 10.
 
 ### Removed
 
-- The .NET 9 library and test targets; consumers must target .NET 10 or later,
-- The repository's benchmark prompt.
+- Removed the .NET 9 library and test targets; consumers must target .NET 10 or later,
+- Removed the repository benchmark prompt from `.github/prompts/benchmark.prompt.md`.
 
 ## [10.0.13] - 2026-10-17
 
