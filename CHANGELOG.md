@@ -7,26 +7,28 @@ For more details, please refer to `PackageReleaseNotes.txt` on a per assembly ba
 > [!NOTE]
 > Changelog entries prior to version 8.4.0 was migrated from previous versions of Cuemon.Extensions.AspNetCore.Authentication.AwsSignature4.
 
-## [11.0.0] - 2026-10-30
+## [11.0.0] - 2026-11-12
 
-This major release adds .NET 11 support, removes the .NET 9 target and updates dependencies and build infrastructure.
+This major release adds .NET 11 support, removes the .NET 9 target, and updates dependencies and documentation hosting.
 
 ### Added
 
-- Added `net11.0` library and test targets,
-- Added `SonarAnalyzer.CSharp` 10.35.0.4138 to the shared production build configuration.
+- .NET 11 library and test targets,
+- `SonarAnalyzer.CSharp` 10.35.0.4138 in the shared production build configuration.
 
 ### Changed
 
 - Updated `Cuemon.AspNetCore.Authentication` and `Cuemon.Security.Cryptography` from 10.8.1 to 10.8.2,
 - Updated `Codebelt.Coverlet.MTP` from 10.1.0 to 10.1.1 and `Microsoft.Testing.Extensions.HangDump` from 2.5.1 to 2.5.2,
-- Updated CI to provision preview SDKs and use Ubuntu 26.04 for Linux jobs,
-- Updated service-update version selection to use Git tags and recognize pending releases,
-- Aligned framework availability documentation and local Docker test environments with .NET 11 and .NET 10.
+- Enabled preview SDK provisioning, moved Linux CI jobs to Ubuntu 26.04, and split Docker test environments by framework,
+- Service-update automation uses Git tags, retains planned releases, and validates release dates,
+- Updated framework availability and package guidance for .NET 11 and .NET 10,
+- Fingerprinted documentation assets use immutable caching for successful and 304 responses, no-store for errors, and full responses instead of ranges.
 
 ### Removed
 
-- Removed the `net9.0` library and test targets.
+- The .NET 9 library and test targets; consumers must target .NET 10 or later,
+- The repository's benchmark prompt.
 
 ## [10.0.13] - 2026-10-17
 
